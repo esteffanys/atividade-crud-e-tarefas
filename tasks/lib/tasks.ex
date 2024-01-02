@@ -12,7 +12,7 @@ defmodule Tasks do
     end) |> Enum.map(&Task.await/1) 
   end
 
-  def trans(dx, dy) do # Translação, soma os valores a cada ponto 
+  def trans(dx, dy) do #  Translação soma os valores a cada ponto 
     pontos_fixos = [{1, 2}, {3, 4}, {5, 6}]
 
     Enum.map(pontos_fixos, fn ponto ->
