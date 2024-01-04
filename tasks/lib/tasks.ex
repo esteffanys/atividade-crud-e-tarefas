@@ -55,7 +55,7 @@ defmodule Transformacoes do
     loop()
   end
 
-  defp transladar({x, y}, dx, dy), do: {x + dx, y + dy}
+ 
 
   defp ref do
     IO.puts "Digite o eixo x ou y"
