@@ -21,7 +21,7 @@ defmodule Crud do
       3 -> atualizar(pontos)
       4 -> excluir(pontos)
       5 -> sair()
-      _ -> 
+      _ ->
         IO.puts "Opção inválida"
         loop(pontos)
     end
@@ -30,7 +30,7 @@ defmodule Crud do
   def criar(pontos) do
     IO.puts "Digite as coordenadas x e y: "
     entrada = IO.gets("") |> String.trim |> String.split(" ") |> Enum.map(&String.to_integer/1)
-    
+
     case entrada do
       [x, y] ->
         novo_pontos = Map.put(pontos, {x, y}, true)
@@ -61,7 +61,7 @@ def atualizar(pontos) do
           IO.puts "Ponto não encontrado."
           atualizar(pontos)
         _ ->
-          novas_coordenadas = IO.gets("") |> String.trim |> String.split(" ") |> Enum.map(&String.to_integer/1)
+          novas_coordenadas = IO.gets("Digite as coordenadas atualizadas: ") |> String.trim |> String.split(" ") |> Enum.map(&String.to_integer/1)
           novo_pontos = Map.delete(pontos, {x, y})
           novo_pontos = Map.put(novo_pontos, {hd(novas_coordenadas), hd(tl(novas_coordenadas))}, true)
           IO.puts "Ponto atualizado com sucesso!"
@@ -76,7 +76,7 @@ end
   def excluir(pontos) do
     IO.puts "Digite as coordenadas x e y:"
     entrada = IO.gets("") |> String.trim |> String.split(" ") |> Enum.map(&String.to_integer/1)
-    
+
     case entrada do
       [x, y] ->
         if Map.has_key?(pontos, {x, y}) do
