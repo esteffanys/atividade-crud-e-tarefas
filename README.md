@@ -59,19 +59,19 @@
 <p>A função loop() lê a opção do usuário e chama a função apropriada para realizar a operação desejada.</p>
 
 ### linha 30 á 43
-<p></p>
+<p>A função "criar" cria um novo ponto</p>
 
 ### linha 45 á 51
-<p></p>
+<p>A função "listar" lista todos os pontos cadastrados</p>
 
 ### linha 53 á 74
-<p></p>
+<p>A função "atualizar" atualiza um ponto existente</p>
 
 ### linha 76 á 94
-<p></p>
+<p>A função "excluir" exclui um ponto existente.</p>
 
 ### linha 96 á 100
-<p></p>
+<p>A função "sair" encerar o programa </p>
 
 ### linha 102
-<p></p>
+<p>Chama o menu do crud</p>
